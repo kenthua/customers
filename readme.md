@@ -11,10 +11,10 @@ Installation,Live DEMO, and tutorial here : http://teknosains.com/i/simple-crud-
 app.js
 
         host: 'localhost',
-        user: 'root',
-        password : 'root',
+        user: 'dbadmin',
+        password : 'dbpassword',
         port : 3306, //port mysql
-        database:'nodejs'	
+        database:'nodejs'
 
 
 	

@@ -42,8 +42,8 @@ app.use(
     connection(mysql,{
         
         host: 'localhost',
-        user: 'root',
-        password : '',
+        user: 'dbadmin',
+        password : 'dbpassword',
         port : 3306, //port mysql
         database:'nodejs'
 
