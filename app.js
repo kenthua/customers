@@ -12,8 +12,8 @@ var path = require('path');
 var customers = require('./routes/customers'); 
 var app = express();
 
-var connection  = require('express-myconnection'); 
-var mysql = require('mysql');
+//var connection  = require('express-myconnection'); 
+//var mysql = require('mysql');
 
 // all environments
 app.set('port', process.env.PORT || 8080);
