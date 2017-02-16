@@ -37,7 +37,7 @@ if ('development' == app.get('env')) {
     type koneksi : single,pool and request 
 -------------------------------------------*/
 
-app.use(
+/*app.use(
     
     connection(mysql,{
         
@@ -49,9 +49,28 @@ app.use(
 
     },'pool') //or single
 
+);*/
+
+app.use(
+    
+    var mysql = require('mysql');
+
+    var connection = mysql.createConnection({
+        host     : '127.0.0.1',
+        port     : '3306',
+        user     : 'dbadin',
+        password : 'dbpassword',
+        database : 'nodejs'
+    });
+
+    connection.connect( function(err){
+        if (err){ 
+            throw err;
+        } else {
+            console.log('Connected');
+        }
+    });
 );
-
-
 
 app.get('/', routes.index);
 app.get('/customers', customers.list);
