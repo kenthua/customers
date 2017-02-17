@@ -1,5 +1,4 @@
 var express = require('express');
-var monk = require('monk');
 var mysql = require('mysql');
 
 var app = express();
