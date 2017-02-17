@@ -59,6 +59,7 @@ app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);
 app.get('/customers/delete/:id', customers.delete_customer);
 app.get('/customers/edit/:id', customers.edit);
+app.get('/customers/retrieve/:id', customers.retrieve);
 app.post('/customers/edit/:id',customers.save_edit);
 
 

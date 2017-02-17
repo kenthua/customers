@@ -23,6 +23,26 @@ exports.list = function(req, res){
   
 };
 
+exports.retrieve = function(req, res){
+
+  req.getConnection(function(err,connection){
+       
+        var query = connection.query("SELECT * FROM customer WHERE id = ?",[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('customers',{page_title:"Customers - Node.js",data:rows});
+                
+           
+         });
+         
+         //console.log(query.sql);
+    });
+  
+};
+
 exports.add = function(req, res){
   res.render('add_customer',{page_title:"Add Customers - Node.js"});
 };
