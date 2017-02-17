@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 -- Dumping data for table`customer`
 --
 
-INSERT INTO `customer` (`id`, `name`, `address`, `email`, `phone`) VALUES
+INSERT INTO `customer` (`id`, `company`, `name`, `address`, `email`, `phone`) VALUES
 (1, 'Telstra', 'Nadya Eka', 'Jl. Ciwidey no 20', 'nadya@yahoo.com', '086454743743'),
 (2, 'BHP', 'Amali', 'Jl. kemandoran no 10 Jakarta', 'amalia@langit.com', '03937263623'),
 (3, 'NAB', 'Angel ', 'Jl. Ciledug no 45A. tanggerang', 'angel@gmail.com', '082271626121'),
