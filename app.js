@@ -47,7 +47,7 @@ app.use(
         port : 3306, //port mysql
         database:'nodejs'
 
-    },'single') // pool or single
+    },'pool') // pool or single
 
 );
 
