@@ -61,9 +61,9 @@ app.get('/customers/delete/:id', customers.delete_customer);
 app.get('/customers/edit/:id', customers.edit);
 app.get('/customers/details/:id', customers.details);
 app.get('/customers/name/:id', customers.getname);
-//app.get('/customers/address/:id', customers.getaddress);
-//app.get('/customers/phone/:id', customers.getphone);
-//app.get('/customers/email/:id', customers.getemail);
+app.get('/customers/address/:id', customers.getaddress);
+app.get('/customers/phone/:id', customers.getphone);
+app.get('/customers/email/:id', customers.getemail);
 app.post('/customers/edit/:id',customers.save_edit);
 
 

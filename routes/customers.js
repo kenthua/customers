@@ -67,6 +67,72 @@ exports.getname = function(req, res){
   
 };
 
+exports.getaddress = function(req, res){
+
+  req.getConnection(function(err,connection){
+       
+        var id = req.params.id;
+
+        var query = connection.query("SELECT address FROM customer WHERE id = ?",[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('address',{page_title:"Customers - Address",data:rows});
+                
+           
+         });
+         
+         //console.log(query.sql);
+    });
+  
+};
+
+exports.getphone = function(req, res){
+
+  req.getConnection(function(err,connection){
+       
+        var id = req.params.id;
+
+        var query = connection.query("SELECT phone FROM customer WHERE id = ?",[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('phone',{page_title:"Customers - Phone",data:rows});
+                
+           
+         });
+         
+         //console.log(query.sql);
+    });
+  
+};
+
+exports.getemail = function(req, res){
+
+  req.getConnection(function(err,connection){
+       
+        var id = req.params.id;
+
+        var query = connection.query("SELECT email FROM customer WHERE id = ?",[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('email',{page_title:"Customers - Email",data:rows});
+                
+           
+         });
+         
+         //console.log(query.sql);
+    });
+  
+};
+
 exports.add = function(req, res){
   res.render('add_customer',{page_title:"Add Customer"});
 };
