@@ -12,8 +12,8 @@ var path = require('path');
 var customers = require('./routes/customers'); 
 var app = express();
 
-//var connection  = require('express-myconnection'); 
-//var mysql = require('mysql');
+var connection  = require('express-myconnection'); 
+var mysql = require('mysql');
 
 // all environments
 app.set('port', process.env.PORT || 8080);
@@ -37,38 +37,21 @@ if ('development' == app.get('env')) {
     type koneksi : single,pool and request 
 -------------------------------------------*/
 
-/*app.use(
+app.use(
     
     connection(mysql,{
         
         host: '127.0.0.1',
         user: 'dbadmin',
         password : 'dbpassword',
-        port : '3306', //port mysql
+        port : 3306, //port mysql
         database:'nodejs'
 
-    },'pool') //or single
+    },'single') // pool or single
 
-);*/
+);
 
-    
-var mysql = require('mysql');
 
-var connection = mysql.createConnection({
-    host     : '127.0.0.1',
-    //port     : '3306',
-    user     : 'dbadin',
-    password : 'dbpassword',
-    database : 'nodejs'
-});
-
-connection.connect( function(err){
-    if (err){ 
-        throw err;
-    } else {
-          console.log('Connected');
-    }
-});
 
 app.get('/', routes.index);
 app.get('/customers', customers.list);
