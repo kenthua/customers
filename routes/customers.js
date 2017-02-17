@@ -27,6 +27,8 @@ exports.retrieve = function(req, res){
 
   req.getConnection(function(err,connection){
        
+        var id = req.params.id;
+
         var query = connection.query("SELECT * FROM customer WHERE id = ?",[id],function(err,rows)
         {
             
