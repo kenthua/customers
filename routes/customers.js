@@ -23,7 +23,7 @@ exports.list = function(req, res){
   
 };
 
-exports.retrieve = function(req, res){
+exports.details = function(req, res){
 
   req.getConnection(function(err,connection){
        
