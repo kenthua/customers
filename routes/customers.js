@@ -110,6 +110,7 @@ exports.save_edit = function(req,res){
         
         var data = {
             
+            company : input.company,
             name    : input.name,
             address : input.address,
             email   : input.email,
