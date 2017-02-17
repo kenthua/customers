@@ -51,26 +51,24 @@ if ('development' == app.get('env')) {
 
 );*/
 
-app.use(
     
-    var mysql = require('mysql');
+var mysql = require('mysql');
 
-    var connection = mysql.createConnection({
-        host     : '127.0.0.1',
-        port     : '3306',
-        user     : 'dbadin',
-        password : 'dbpassword',
-        database : 'nodejs'
-    });
+var connection = mysql.createConnection({
+    host     : '127.0.0.1',
+    port     : '3306',
+    user     : 'dbadin',
+    password : 'dbpassword',
+    database : 'nodejs'
+});
 
-    connection.connect( function(err){
-        if (err){ 
-            throw err;
-        } else {
-            console.log('Connected');
-        }
-    });
-);
+connection.connect( function(err){
+    if (err){ 
+        throw err;
+    } else {
+          console.log('Connected');
+    }
+});
 
 app.get('/', routes.index);
 app.get('/customers', customers.list);
