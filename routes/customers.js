@@ -45,6 +45,28 @@ exports.details = function(req, res){
   
 };
 
+exports.getname = function(req, res){
+
+  req.getConnection(function(err,connection){
+       
+        var id = req.params.id;
+
+        var query = connection.query("SELECT name FROM customer WHERE id = ?",[id],function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('name',{page_title:"Customers - Name",data:rows});
+                
+           
+         });
+         
+         //console.log(query.sql);
+    });
+  
+};
+
 exports.add = function(req, res){
   res.render('add_customer',{page_title:"Add Customer"});
 };
