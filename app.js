@@ -9,7 +9,8 @@ var http = require('http');
 var path = require('path');
 
 //load customers route
-var customers = require('./routes/customers'); 
+var customers = require('./routes/customers');
+var customersweb = require('./routes/customersweb'); 
 var app = express();
 
 var connection  = require('express-myconnection'); 
@@ -52,7 +53,7 @@ app.use(
 );
 
 
-
+// Base API
 app.get('/', routes.index);
 app.get('/customers', customers.list);
 app.get('/customers/add', customers.add);
@@ -65,6 +66,20 @@ app.get('/customers/address/:id', customers.getaddress);
 app.get('/customers/phone/:id', customers.getphone);
 app.get('/customers/email/:id', customers.getemail);
 app.post('/customers/edit/:id',customers.save_edit);
+
+// Web application
+app.get('/', routes.index);
+app.get('/customersweb', customers.list);
+app.get('/customersweb/add', customers.add);
+app.post('/customersweb/add', customers.save);
+app.get('/customersweb/delete/:id', customers.delete_customer);
+app.get('/customersweb/edit/:id', customers.edit);
+app.get('/customersweb/details/:id', customers.details);
+app.get('/customersweb/name/:id', customers.getname);
+app.get('/customersweb/address/:id', customers.getaddress);
+app.get('/customersweb/phone/:id', customers.getphone);
+app.get('/customersweb/email/:id', customers.getemail);
+app.post('/customersweb/edit/:id',customers.save_edit);
 
 
 app.use(app.router);
