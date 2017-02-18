@@ -41,11 +41,10 @@ app.use(
     
     connection(mysql,{
         
-//        host: '172.30.44.183', // local
-        host: '172.30.234.83',  // IT
+        host: '172.30.25.169', // host mysql service
         user: 'dbadmin',
         password : 'dbpassword',
-        port : 3306, //port mysql
+        port : 3306, // port mysql service
         database:'marketing'
 
     },'pool') // pool or single
