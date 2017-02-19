@@ -22,6 +22,7 @@ exports.list = function(req, res){
   
 };
 
+
 exports.details = function(req, res){
 
   req.getConnection(function(err,connection){
@@ -42,6 +43,7 @@ exports.details = function(req, res){
     });
   
 };
+
 
 exports.getname = function(req, res){
 
@@ -64,6 +66,7 @@ exports.getname = function(req, res){
   
 };
 
+
 exports.getaddress = function(req, res){
 
   req.getConnection(function(err,connection){
@@ -84,6 +87,7 @@ exports.getaddress = function(req, res){
     });
   
 };
+
 
 exports.getphone = function(req, res){
 
@@ -106,6 +110,7 @@ exports.getphone = function(req, res){
   
 };
 
+
 exports.getemail = function(req, res){
 
   req.getConnection(function(err,connection){
@@ -127,9 +132,11 @@ exports.getemail = function(req, res){
   
 };
 
+
 exports.add = function(req, res){
   res.render('add_customer_web',{page_title:"Add Customer"});
 };
+
 
 exports.edit = function(req, res){
     
@@ -151,7 +158,7 @@ exports.edit = function(req, res){
     }); 
 };
 
-/*Save the customer*/
+
 exports.save = function(req,res){
     
     var input = JSON.parse(JSON.stringify(req.body));
@@ -180,6 +187,7 @@ exports.save = function(req,res){
             
     });
 };
+
 
 exports.save_edit = function(req,res){
     
