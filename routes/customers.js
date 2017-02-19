@@ -79,7 +79,7 @@ exports.getaddress = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('address',{page_title:"Customers - Address",data:rows});
+            res.render('item',{page_item:"address",data:rows});
                 
            
          });
@@ -101,7 +101,7 @@ exports.getphone = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('phone',{page_title:"Customers - Phone",data:rows});
+            res.render('item',{page_item:"phone",data:rows});
                 
            
          });
@@ -123,7 +123,7 @@ exports.getemail = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('email',{page_title:"Customers - Email",data:rows});
+            res.render('item',{page_item:"email",data:rows});
                 
            
          });
