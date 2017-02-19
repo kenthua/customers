@@ -69,17 +69,17 @@ app.post('/customers/edit/:id',customers.save_edit);
 
 // Web application
 app.get('/', routes.index);
-app.get('/customersweb', customers.list);
-app.get('/customersweb/add', customers.add);
-app.post('/customersweb/add', customers.save);
-app.get('/customersweb/delete/:id', customers.delete_customer);
-app.get('/customersweb/edit/:id', customers.edit);
-app.get('/customersweb/details/:id', customers.details);
-app.get('/customersweb/name/:id', customers.getname);
-app.get('/customersweb/address/:id', customers.getaddress);
-app.get('/customersweb/phone/:id', customers.getphone);
-app.get('/customersweb/email/:id', customers.getemail);
-app.post('/customersweb/edit/:id',customers.save_edit);
+app.get('/customersweb', customersweb.list);
+app.get('/customersweb/add', customersweb.add);
+app.post('/customersweb/add', customersweb.save);
+app.get('/customersweb/delete/:id', customersweb.delete_customer);
+app.get('/customersweb/edit/:id', customersweb.edit);
+app.get('/customersweb/details/:id', customersweb.details);
+app.get('/customersweb/name/:id', customersweb.getname);
+app.get('/customersweb/address/:id', customersweb.getaddress);
+app.get('/customersweb/phone/:id', customersweb.getphone);
+app.get('/customersweb/email/:id', customersweb.getemail);
+app.post('/customersweb/edit/:id',customersweb.save_edit);
 
 
 app.use(app.router);
