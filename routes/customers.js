@@ -57,7 +57,7 @@ exports.getname = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('item',{page_title:"Customers - Name",data:rows});
+            res.render('item',{page_item:"name",data:rows});
                 
            
          });
