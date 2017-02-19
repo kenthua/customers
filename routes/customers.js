@@ -18,7 +18,6 @@ exports.list = function(req, res){
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -40,7 +39,6 @@ exports.details = function(req, res){
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -57,12 +55,11 @@ exports.getname = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('item',{page_item:"name",data:rows});
+            res.render('name',{page_item:"name",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -79,12 +76,11 @@ exports.getaddress = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('item',{page_item:"address",data:rows});
+            res.render('address',{page_item:"address",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -101,12 +97,11 @@ exports.getphone = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('item',{page_item:"phone",data:rows});
+            res.render('phone',{page_item:"phone",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -123,12 +118,11 @@ exports.getemail = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('item',{page_item:"email",data:rows});
+            res.render('email',{page_item:"email",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -154,7 +148,6 @@ exports.edit = function(req, res){
            
          });
          
-         //console.log(query.sql);
     }); 
 };
 
@@ -184,9 +177,7 @@ exports.save = function(req,res){
           res.redirect('/customers');
           
         });
-        
-       // console.log(query.sql); get raw query
-    
+            
     });
 };
 

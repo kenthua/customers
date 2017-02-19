@@ -53,8 +53,10 @@ app.use(
 );
 
 
-// Base API
+// Index
 app.get('/', routes.index);
+
+// Base API
 app.get('/customers', customers.list);
 app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);
@@ -68,7 +70,6 @@ app.get('/customers/email/:id', customers.getemail);
 app.post('/customers/edit/:id',customers.save_edit);
 
 // Web application
-app.get('/', routes.index);
 app.get('/customersweb', customersweb.list);
 app.get('/customersweb/add', customersweb.add);
 app.post('/customersweb/add', customersweb.save);

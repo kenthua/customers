@@ -13,12 +13,11 @@ exports.list = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('customers',{page_title:"Customers - List",data:rows});
+            res.render('customers_web',{page_title:"Customers - List",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -35,12 +34,11 @@ exports.details = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('customers',{page_title:"Customers - Details",data:rows});
+            res.render('customers_web',{page_title:"Customers - Details",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -57,12 +55,11 @@ exports.getname = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('name',{page_title:"Customers - Name",data:rows});
+            res.render('name_web',{page_title:"Customers - Name",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -79,12 +76,11 @@ exports.getaddress = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('address',{page_title:"Customers - Address",data:rows});
+            res.render('address_web',{page_title:"Customers - Address",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -101,12 +97,11 @@ exports.getphone = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('phone',{page_title:"Customers - Phone",data:rows});
+            res.render('phone_web',{page_title:"Customers - Phone",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
@@ -123,18 +118,17 @@ exports.getemail = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('email',{page_title:"Customers - Email",data:rows});
+            res.render('email_web',{page_title:"Customers - Email",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     });
   
 };
 
 exports.add = function(req, res){
-  res.render('add_customer',{page_title:"Add Customer"});
+  res.render('add_customer_web',{page_title:"Add Customer"});
 };
 
 exports.edit = function(req, res){
@@ -149,12 +143,11 @@ exports.edit = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('edit_customer',{page_title:"Edit Customer",data:rows});
+            res.render('edit_customer_web',{page_title:"Edit Customer",data:rows});
                 
            
          });
          
-         //console.log(query.sql);
     }); 
 };
 
@@ -181,12 +174,10 @@ exports.save = function(req,res){
           if (err)
               console.log("Error inserting : %s ",err );
          
-          res.redirect('/customers');
+          res.redirect('/customers_web');
           
         });
-        
-       // console.log(query.sql); get raw query
-    
+            
     });
 };
 
@@ -213,7 +204,7 @@ exports.save_edit = function(req,res){
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('/customers');
+          res.redirect('/customers_web');
           
         });
     
@@ -233,7 +224,7 @@ exports.delete_customer = function(req,res){
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('/customers');
+             res.redirect('/customers_web');
              
         });
         
