@@ -13,7 +13,7 @@ exports.list = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('customers',{page_title:"Customers - List",data:rows});
+            res.render('customers',{page_item:"list",data:rows});
                 
            
          });
@@ -34,7 +34,7 @@ exports.details = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('customers',{page_title:"Customers - Details",data:rows});
+            res.render('customers',{page_item:"details",data:rows});
                 
            
          });
