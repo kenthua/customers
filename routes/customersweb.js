@@ -181,7 +181,7 @@ exports.save = function(req,res){
           if (err)
               console.log("Error inserting : %s ",err );
          
-          res.redirect('/customers_web');
+          res.redirect('/customersweb');
           
         });
             
@@ -212,7 +212,7 @@ exports.save_edit = function(req,res){
           if (err)
               console.log("Error Updating : %s ",err );
          
-          res.redirect('/customers_web');
+          res.redirect('/customersweb');
           
         });
     
@@ -232,7 +232,7 @@ exports.delete_customer = function(req,res){
              if(err)
                  console.log("Error deleting : %s ",err );
             
-             res.redirect('/customers_web');
+             res.redirect('/customersweb');
              
         });
         
