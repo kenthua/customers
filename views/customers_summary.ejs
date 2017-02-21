@@ -1,16 +1,13 @@
-<%
+{
+    "<%=page_item%>":                              
+            <% if(data.length){           
+                for(var i = 0;i < data.length;i++) { %>
+                    "company":"<%=data[i].company%>",
+                    "name":"<%=data[i].name%>"
 
-var root = {};
 
-employees.item = new Array();
-
-for (var i = 0; i < data.length; i++) {
-    var item = data[i];
-
-    employees.accounting.push({
-        "company" : item.company,
-        "name"    : item.name,
-    });
+ 
+            <% }
+             } else { %>
+            <% } %>
 }
-
-%>
