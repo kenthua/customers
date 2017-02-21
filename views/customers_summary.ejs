@@ -1,19 +1,12 @@
 {
-    "<%=page_item%>": 
-
-                               
-            <% if(data.length){ 
-                                
+    "<%=page_item%>":                              
+            <% if(data.length){           
                 for(var i = 0;i < data.length;i++) { %>
-                 
                     "company":"<%=data[i].company%>",
                     "name":"<%=data[i].name%>"
-                    "}, {"
+                }, {
 
             <% }
-            
              } else { %>
-
             <% } %>
-               
 }
