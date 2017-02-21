@@ -55,7 +55,7 @@ exports.details = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('customers',{page_item:"details",data:rows});
+            res.render('customers_all',{page_item:"details",data:rows});
                 
            
          });
