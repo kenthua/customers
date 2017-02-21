@@ -1,23 +1,18 @@
 {
-    "<%=page_item%>": 
-
-                               
-                <% if(data.length){ 
-                                
-                 for(var i = 0;i < data.length;i++) { %>
-                 
-                    "company":"<%=data[i].company%>",
-                    "name":"<%=data[i].name%>",
-                    "address":"<%=data[i].address%>",
-                    "phone":"<%=data[i].phone%>",
-                    "email":"<%=data[i].email%>"
-
-            <% }
-            
-             } else{ %>
-
+    "<%=page_item%>": [{                         
+            <% if(data.length){           
+                for(var i = 0;i < data.length;i++) { 
+                if (i > 0) { %>
+                }, {
+                <% } else { %>
+                <% } %>
+                "company":"<%=data[i].company%>",
+                "name":"<%=data[i].name%>",
+                "address":"<%=data[i].address%>",
+                "phone":"<%=data[i].phone%>",
+                "email":"<%=data[i].email%>"
+                <% }
+             } else { %>
             <% } %>
-                
-                              
-                
+        }]
 }
