@@ -57,7 +57,8 @@ app.use(
 app.get('/', routes.index);
 
 // Base API
-app.get('/customers', customers.list);
+app.get('/customers', customers.listall);
+app.get('/customers/list', customers.listsummary);
 app.get('/customers/add', customers.add);
 app.post('/customers/add', customers.save);
 app.get('/customers/delete/:id', customers.delete_customer);
@@ -70,7 +71,8 @@ app.get('/customers/email/:id', customers.getemail);
 app.post('/customers/edit/:id',customers.save_edit);
 
 // Web application
-app.get('/customersweb', customersweb.list);
+app.get('/customersweb', customersweb.listall);
+app.get('/customersweb/list', customersweb.listsummary);
 app.get('/customersweb/add', customersweb.add);
 app.post('/customersweb/add', customersweb.save);
 app.get('/customersweb/delete/:id', customersweb.delete_customer);

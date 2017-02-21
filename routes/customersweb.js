@@ -3,7 +3,7 @@
  * GET users listing.
  */
 
-exports.list = function(req, res){
+exports.listall = function(req, res){
 
   req.getConnection(function(err,connection){
        
@@ -13,7 +13,27 @@ exports.list = function(req, res){
             if(err)
                 console.log("Error Selecting : %s ",err );
      
-            res.render('customers_web',{page_title:"Customers - List",data:rows});
+            res.render('customers_web_all',{page_title:"Customers - List",data:rows});
+                
+           
+         });
+         
+    });
+  
+};
+
+
+exports.listsummary = function(req, res){
+
+  req.getConnection(function(err,connection){
+       
+        var query = connection.query('SELECT * FROM customer',function(err,rows)
+        {
+            
+            if(err)
+                console.log("Error Selecting : %s ",err );
+     
+            res.render('customers_web_summary',{page_title:"Customers - List",data:rows});
                 
            
          });
