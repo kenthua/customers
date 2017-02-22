@@ -41,13 +41,14 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`id`, `company`, `name`, `address`, `email`, `phone`) VALUES
-(1, 'Telstra', 'Nadya Eka', 'Jl. Ciwidey no 20', 'nadya@yahoo.com', '086454743743'),
-(2, 'BHP', 'Amali', 'Jl. kemandoran no 10 Jakarta', 'amalia@langit.com', '03937263623'),
-(3, 'NAB', 'Angel ', 'Jl. Ciledug no 45A. tanggerang', 'angel@gmail.com', '082271626121'),
-(4, 'RACV', 'Ujang', 'Jl. ribut no 90 A', 'ujang@gmail.com', '07846352532'),
-(5, 'Coles', 'Memet', 'Blok cepu no 14. Bandung', 'memet@ongkek.com', '038372636232'),
-(6, 'Australia Post','Agung', 'Jl st Petersburg no 34. Russia', 'agung@yahoo.com', '038373273262'),
-(7, 'Officeworks', 'Jhon Taylor', 'St paris A . Block 43. paris', 'jtaylor@yahoo.com', '039223232323');
+(1, 'Telstra', 'Nadya Eka', '242 Exhibition Street, Melbourne VIC 3000', 'nadya@telstra.com.au', '(03) 9632 6323'),
+(2, 'BHP Billiton', 'Amali Petry', '171 Collins Street, Melbourne VIC 3000', 'amalia@bhpbilliton.com', '(03) 9609 3333'),
+(3, 'NAB', 'Angel Peters ', '800 Bourke Street, Docklands VIC 3008', 'angel@nab.com.au', '13 22 65'),
+(4, 'RACV', 'George Martin', '550 Princes Highway, Noble Park North VIC 3174', 'gmartin@racv.com.au', '(03) 8832 7980'),
+(5, 'Coles', 'Frank Faller', '800 Toorak Road, Hawthorn East, VIC 3146', 'ffaller@coles.com.au', '(03) 9829 5111'),
+(6, 'Australia Post','Andrea Miller', '111 Bourke St, Melbourne VIC 3000', 'amiller@auspost.com.au', '13 13 18'),
+(7, 'Officeworks', 'Jojn Taylor', '236 E Boundary Rd, Bentleigh East VIC 3165', 'jtaylor@officeworks.com.au', '(03) 8575 1900');
+(8, 'Westpac', 'Ariel Fraser', '275 Kent St, Sydney NSW 2000', 'afraser@westpac.com.au', '13 20 32');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
