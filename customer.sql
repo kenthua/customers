@@ -47,7 +47,7 @@ INSERT INTO `customer` (`id`, `company`, `name`, `address`, `email`, `phone`) VA
 (4, 'RACV', 'George Martin', '550 Princes Highway, Noble Park North VIC 3174', 'gmartin@racv.com.au', '(03) 8832 7980'),
 (5, 'Coles', 'Frank Faller', '800 Toorak Road, Hawthorn East, VIC 3146', 'ffaller@coles.com.au', '(03) 9829 5111'),
 (6, 'Australia Post','Andrea Miller', '111 Bourke St, Melbourne VIC 3000', 'amiller@auspost.com.au', '13 13 18'),
-(7, 'Officeworks', 'Jojn Taylor', '236 E Boundary Rd, Bentleigh East VIC 3165', 'jtaylor@officeworks.com.au', '(03) 8575 1900');
+(7, 'Officeworks', 'Jojn Taylor', '236 E Boundary Rd, Bentleigh East VIC 3165', 'jtaylor@officeworks.com.au', '(03) 8575 1900'),
 (8, 'Westpac', 'Ariel Fraser', '275 Kent St, Sydney NSW 2000', 'afraser@westpac.com.au', '13 20 32');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
