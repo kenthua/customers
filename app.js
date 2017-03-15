@@ -10,10 +10,10 @@ var path = require('path');
 
 //load customers route
 var customers = require('./routes/customers');
-var customersweb = require('./routes/customersweb'); 
+var customersweb = require('./routes/customersweb');
 var app = express();
 
-var connection  = require('express-myconnection'); 
+var connection  = require('express-myconnection');
 var mysql = require('mysql');
 
 // all environments
@@ -35,14 +35,14 @@ if ('development' == app.get('env')) {
 
 /*------------------------------------------
     connection peer, register as middleware
-    type koneksi : single,pool and request 
+    type koneksi : single,pool and request
 -------------------------------------------*/
 
 app.use(
-    
+
     connection(mysql,{
-        
-        host: '172.30.25.169', // host mysql service
+
+        host: '172.30.80.17', // host mysql service
         user: 'dbadmin',
         password : 'dbpassword',
         port : 3306, // port mysql service
