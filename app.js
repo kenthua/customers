@@ -42,11 +42,11 @@ app.use(
 
     connection(mysql,{
 
-        host: '172.30.115.152', // host mysql service
-        user: 'dbadmin',
-        password : 'dbpassword',
-        port : 3306, // port mysql service
-        database:'marketing'
+        host: process.env.MYSQL_SERVICE_HOST, // host mysql service
+        user: process.env.MYSQL_USER,
+        password : process.env.MYSQL_PASSWORD,
+        port : process.env.MYSQL_SERVICE_PORT, // port mysql service
+        database: process.env.MYSQL_DATABASE
 
     },'pool') // pool or single
 
